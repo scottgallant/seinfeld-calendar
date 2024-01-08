@@ -2,7 +2,9 @@ A simple Next.js calendar app to track daily habits.
 
 ![screenshot](https://scottgallant.net/media/seinfeld-calendar.png)
 
-The [Seinfeld Strategy](https://jamesclear.com/stop-procrastinating-seinfeld-strategy) is used when your trying to build a daily habit (for Jerry Seinfeld, that was writing). You just mark a big X on a calendar each day you do your activity. Read my full post on this [here](https://scottgallant.net/posts/seinfeld-calendar/). 
+The [Seinfeld Strategy](https://jamesclear.com/stop-procrastinating-seinfeld-strategy) is used when trying to build a daily habit (for Jerry Seinfeld, that was writing). You just mark a big X on a calendar each day you do your activity. This is a simple Next.js calendar that loops through a JSON file containing dates and descriptions then renders those to the calendar. 
+
+Read my full post [here](https://scottgallant.net/posts/seinfeld-calendar/). 
 
 ## Getting Started
 
@@ -25,6 +27,6 @@ const specialDates = [
 ];
 ```
 
-## Deploying to Vercel
+## Try it
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fscottgallant%2Fseinfeld-calendar)
