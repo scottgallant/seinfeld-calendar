@@ -60,7 +60,7 @@ const Calendar = ({ specialDates }) => {
     return (
         <div className="lg:w-10/12 mx-auto bg-transparent">
             <MonthPicker selectedMonth={selectedMonth} onMonthChange={setSelectedMonth} monthNames={monthNames} month={month} />
-            <div className="mb-16 bg-gray-50">
+            <div className="mb-16 bg-gray-50 mx-4">
                 <div className="flex bg-gray-50 p-2 border-indigo-100 border-b">
                     {daysOfWeek.map(day => (
                         <div className="w-1/7 text-center text-xs py-1" key={day}>
