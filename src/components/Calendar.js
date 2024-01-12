@@ -55,7 +55,7 @@ const Calendar = ({ specialDates }) => {
     };
 
     
-
+    const today = new Date();
 
     return (
         <div className="lg:w-10/12 mx-auto bg-transparent">
@@ -72,10 +72,10 @@ const Calendar = ({ specialDates }) => {
                     {Array.from({ length: totalCells }).map((_, i) => (
                         <div
                             key={i}
-                            className={` border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= paddingDays && isSpecialDate(dates[i - paddingDays])
+                            className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= paddingDays && isSpecialDate(dates[i - paddingDays])
                                 ? 'bg-blue-50'
                                 : 'bg-white'
-                                } ${i % 7 === 0 ? 'border-l' : ''}`}
+                                } ${i % 7 === 0 ? 'border-l' : ''} ${dates[i - paddingDays].getDate() === new Date().getDate() ? 'bg-yellow-50' : ''}`}
                         >
                             {i >= paddingDays && (
                                 <>
