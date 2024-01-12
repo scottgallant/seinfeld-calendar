@@ -72,14 +72,14 @@ const Calendar = ({ specialDates }) => {
                     {Array.from({ length: totalCells }).map((_, i) => (
                         <div
                             key={i}
-                            className={` border-indigo-100 border-r border-b w-1/7 h-20 lg:p-2 ${i >= paddingDays && isSpecialDate(dates[i - paddingDays])
+                            className={` border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= paddingDays && isSpecialDate(dates[i - paddingDays])
                                 ? 'bg-blue-50'
                                 : 'bg-white'
                                 } ${i % 7 === 0 ? 'border-l' : ''}`}
                         >
                             {i >= paddingDays && (
                                 <>
-                                    <div className=" text-gray-500 text-sm">{dates[i - paddingDays].getDate()}</div>
+                                    <div className=" text-gray-400 text-xs ">{dates[i - paddingDays].getDate()}</div>
                                     <div className="text-xs text-gray-600 text-center  text-ellipsis overflow-hidden ">
                                         {getDescriptionForDate(dates[i - paddingDays])}
                                     </div>
