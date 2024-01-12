@@ -75,7 +75,7 @@ const Calendar = ({ specialDates }) => {
                             className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= paddingDays && isSpecialDate(dates[i - paddingDays])
                                 ? 'bg-blue-50'
                                 : 'bg-white'
-                                } ${i % 7 === 0 ? 'border-l' : ''} ${dates[i - paddingDays].getDate() === new Date().getDate() ? 'bg-yellow-50' : ''}`}
+                                } ${i % 7 === 0 ? 'border-l' : ''} ${i >= paddingDays &&dates[i - paddingDays].getDate() === new Date().getDate() ? 'bg-yellow-50' : ''}`}
                         >
                             {i >= paddingDays && (
                                 <>
