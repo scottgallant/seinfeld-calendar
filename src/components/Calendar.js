@@ -27,7 +27,7 @@ const Calendar = ({ specialDates }) => {
         dates.push(new Date(d));
     }
 
-    const firstDayOfMonth = startDate.getDay()-1; // -1 because we want Monday to be the first day of the week
+    const firstDayOfMonth = startDate.getDay()-1; // -1 makes Monday to be the first day of the week
     const totalCells = firstDayOfMonth + dates.length;
 
     const formatDate = (date) => {
@@ -74,7 +74,7 @@ const Calendar = ({ specialDates }) => {
                             className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])
                                 ? 'bg-blue-50'
                                 : 'bg-white'
-                                } ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() ? 'bg-yellow-50' : ''}`}
+                                } ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-yellow-50' : ''}`}
                         >
                             {i >= firstDayOfMonth && (
                                 <>

@@ -23,10 +23,8 @@ const MonthPicker = ({ selectedMonth, onMonthChange, monthNames, month }) => {
         <DropdownMenuItem key={month} onClick={() => onMonthChange(month)} className={`text-lg p-2 ${month === selectedMonth ? 'bg-blue-50' : ''
       }`}> 
         <span>{new Date(2024, month).toLocaleString('default', { month: 'long' })}</span>
-      </DropdownMenuItem>
-                ))}
-          
-
+        </DropdownMenuItem>
+      ))}
       </DropdownMenuContent>
     </DropdownMenu>
   )
