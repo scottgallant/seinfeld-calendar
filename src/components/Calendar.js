@@ -28,8 +28,7 @@ const Calendar = ({ specialDates }) => {
     }
 
     const firstDayOfMonth = startDate.getDay()-1; // -1 because we want Monday to be the first day of the week
-    const paddingDays = firstDayOfMonth;
-    const totalCells = paddingDays + dates.length;
+    const totalCells = firstDayOfMonth + dates.length;
 
     const formatDate = (date) => {
         let month = '' + (date.getMonth() + 1);
@@ -72,16 +71,16 @@ const Calendar = ({ specialDates }) => {
                     {Array.from({ length: totalCells }).map((_, i) => (
                         <div
                             key={i}
-                            className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= paddingDays && isSpecialDate(dates[i - paddingDays])
+                            className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])
                                 ? 'bg-blue-50'
                                 : 'bg-white'
-                                } ${i % 7 === 0 ? 'border-l' : ''} ${i >= paddingDays &&dates[i - paddingDays].getDate() === new Date().getDate() ? 'bg-yellow-50' : ''}`}
+                                } ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() ? 'bg-yellow-50' : ''}`}
                         >
-                            {i >= paddingDays && (
+                            {i >= firstDayOfMonth && (
                                 <>
-                                    <div className=" text-gray-400 text-xs ">{dates[i - paddingDays].getDate()}</div>
+                                    <div className=" text-gray-400 text-xs ">{dates[i - firstDayOfMonth].getDate()}</div>
                                     <div className="text-xs text-gray-600 text-center  text-ellipsis overflow-hidden ">
-                                        {getDescriptionForDate(dates[i - paddingDays])}
+                                        {getDescriptionForDate(dates[i - firstDayOfMonth])}
                                     </div>
                                 </>
                             )}
