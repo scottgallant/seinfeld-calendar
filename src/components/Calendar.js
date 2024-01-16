@@ -75,32 +75,31 @@ const Calendar = ({ specialDates }) => {
                 </div>
                 <div className="flex flex-wrap">
                     {Array.from({ length: totalCells }).map((_, i) => (
-                        <Dialog>
+                        <Dialog key={i}>
                      
-                        <DialogTrigger 
-                            key={i}
-                            className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])? 'bg-blue-50' : 'bg-white'} ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-yellow-50' : ''}`}
-                        >
-                            {i >= firstDayOfMonth && (
-                                <>
-                                    <div className=" text-gray-400 text-xs ">{dates[i - firstDayOfMonth].getDate()}</div>
-                                    <div className="text-xs text-gray-600 text-center  text-ellipsis overflow-hidden ">
-                                        {getDescriptionForDate(dates[i - firstDayOfMonth])}
-                                    </div>
-                                </>
-                            )}
-                            <DialogContent onInteractOutside={(e) => {e.preventDefault();}} className="w-11/12">
-                          <DialogHeader>
-                            <DialogDescription className='text-xl text-center'>
-                            {getDescriptionForDate(dates[i - firstDayOfMonth]) || (
-                                <> 
-                                <p className='text-4xl'>🤷</p>
-                                <p>No activities </p>
-                                </>) }
-                            </DialogDescription>
-                          </DialogHeader>
-                        </DialogContent>
-                        </DialogTrigger>
+                            <DialogTrigger 
+                                className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])? 'bg-blue-50' : 'bg-white'} ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-yellow-50' : ''}`}
+                            >
+                                {i >= firstDayOfMonth && (
+                                    <>
+                                        <div className=" text-gray-400 text-xs ">{dates[i - firstDayOfMonth].getDate()}</div>
+                                        <div className="text-xs text-gray-600 text-center  text-ellipsis overflow-hidden ">
+                                            {getDescriptionForDate(dates[i - firstDayOfMonth])}
+                                        </div>
+                                    </>
+                                )}
+                                <DialogContent onInteractOutside={(e) => {e.preventDefault();}} className="w-11/12">
+                                    <DialogHeader>
+                                        <DialogDescription className='text-xl text-center'>
+                                        {getDescriptionForDate(dates[i - firstDayOfMonth]) || (
+                                            <> 
+                                            <p className='text-4xl'>🤷</p>
+                                            <p>No activities</p>
+                                            </>)}
+                                        </DialogDescription>
+                                    </DialogHeader>
+                                </DialogContent>
+                            </DialogTrigger>
                         </Dialog>
                     ))}
                 </div>
