@@ -86,9 +86,7 @@ const Calendar = ({ specialDates }) => {
                                         <div className="text-xs text-gray-600 text-center  text-ellipsis overflow-hidden ">
                                             {getDescriptionForDate(dates[i - firstDayOfMonth])}
                                         </div>
-                                    </>
-                                )}
-                                <DialogContent onInteractOutside={(e) => {e.preventDefault();}} className="w-11/12">
+                                    <DialogContent onInteractOutside={(e) => {e.preventDefault();}} className="w-11/12">
                                     <DialogHeader>
                                         <DialogDescription className='text-xl text-center'>
                                         {getDescriptionForDate(dates[i - firstDayOfMonth]) || (
@@ -99,6 +97,8 @@ const Calendar = ({ specialDates }) => {
                                         </DialogDescription>
                                     </DialogHeader>
                                 </DialogContent>
+                                </>
+                                )}
                             </DialogTrigger>
                         </Dialog>
                     ))}
