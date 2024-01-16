@@ -7,6 +7,15 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+  import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } from "@/components/ui/dialog"
 import MonthPicker from '../components/MonthPicker';
 
 const Calendar = ({ specialDates }) => {
@@ -52,13 +61,10 @@ const Calendar = ({ specialDates }) => {
         const formattedDate = formatDate(date);
         return specialDates.some(d => d.date === formattedDate);
     };
-
-    
-    const today = new Date();
-
     return (
         <div className="lg:w-10/12 mx-auto bg-transparent">
             <MonthPicker selectedMonth={selectedMonth} onMonthChange={setSelectedMonth} monthNames={monthNames} month={month} />
+            
             <div className="mb-16 bg-gray-50 mx-4">
                 <div className="flex bg-gray-50 p-2 border-indigo-100 border-b">
                     {daysOfWeek.map(day => (
@@ -69,12 +75,11 @@ const Calendar = ({ specialDates }) => {
                 </div>
                 <div className="flex flex-wrap">
                     {Array.from({ length: totalCells }).map((_, i) => (
-                        <div
+                        <Dialog>
+                     
+                        <DialogTrigger 
                             key={i}
-                            className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])
-                                ? 'bg-blue-50'
-                                : 'bg-white'
-                                } ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-yellow-50' : ''}`}
+                            className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])? 'bg-blue-50' : 'bg-white'} ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-yellow-50' : ''}`}
                         >
                             {i >= firstDayOfMonth && (
                                 <>
@@ -84,7 +89,19 @@ const Calendar = ({ specialDates }) => {
                                     </div>
                                 </>
                             )}
-                        </div>
+                            <DialogContent onInteractOutside={(e) => {e.preventDefault();}} className="w-11/12">
+                          <DialogHeader>
+                            <DialogDescription className='text-xl text-center'>
+                            {getDescriptionForDate(dates[i - firstDayOfMonth]) || (
+                                <> 
+                                <p className='text-4xl'>🤷</p>
+                                <p>No activities </p>
+                                </>) }
+                            </DialogDescription>
+                          </DialogHeader>
+                        </DialogContent>
+                        </DialogTrigger>
+                        </Dialog>
                     ))}
                 </div>
             </div>
