@@ -11,7 +11,7 @@ const specialDates = [
     { "date": "2024-01-15", "description": "Run 3K, Tabata 10 mins" },
     { "date": "2024-01-16", "description": "Run 3K" },
     { "date": "2024-01-17", "description": "Physio" },
-    { "date": "2024-01-17", "description": "Strentgh Training" },
+    { "date": "2024-01-18", "description": "Strentgh Training" },
 ];
 
 export default specialDates;
