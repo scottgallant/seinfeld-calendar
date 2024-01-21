@@ -77,7 +77,7 @@ const Calendar = ({ specialDates }) => {
                 </div>
                 <div className="flex flex-wrap">
                     {Array.from({ length: totalCells }).map((_, i) => (
-                        <Drawer.Root shouldScaleBackground>
+                        <Drawer.Root shouldScaleBackground key={i}>
                         <Drawer.Trigger asChild>
                         
                             <div 
