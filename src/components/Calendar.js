@@ -65,8 +65,8 @@ const Calendar = ({ specialDates }) => {
         <div className="lg:w-10/12 mx-auto bg-transparent">
             <MonthPicker selectedMonth={selectedMonth} onMonthChange={setSelectedMonth} monthNames={monthNames} month={month} />
             
-            <div className="mb-16 bg-gray-50 mx-4">
-                <div className="flex bg-gray-50 p-2 border-indigo-100 border-b">
+            <div className="mb-16 mx-4">
+                <div className="flex p-2 border-gray-200 border-b">
                     {daysOfWeek.map(day => (
                         <div className="w-1/7 text-center text-xs py-1" key={day}>
                             {day}
@@ -78,11 +78,11 @@ const Calendar = ({ specialDates }) => {
                         <Dialog key={i}>
                      
                             <DialogTrigger 
-                                className={`border-indigo-100 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])? 'bg-blue-50' : 'bg-white'} ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-yellow-50' : ''}`}
+                                className={`border-gray-200 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])? 'bg-amber-50' : 'bg-white'} ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-amber-100' : ''}`}
                             >
                                 {i >= firstDayOfMonth && (
                                     <>
-                                        <div className=" text-gray-400 text-xs ">{dates[i - firstDayOfMonth].getDate()}</div>
+                                        <div className=" text-gray-400 text-xs mb-2 ">{dates[i - firstDayOfMonth].getDate()}</div>
                                         <div className="text-xs text-gray-600 text-center  text-ellipsis overflow-hidden ">
                                             {getDescriptionForDate(dates[i - firstDayOfMonth])}
                                         </div>
