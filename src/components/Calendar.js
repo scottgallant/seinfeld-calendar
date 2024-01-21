@@ -7,7 +7,7 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
-  import {
+import {
     Dialog,
     DialogContent,
     DialogDescription,
@@ -16,6 +16,8 @@ import {
     DialogTitle,
     DialogTrigger,
   } from "@/components/ui/dialog"
+import { MyDrawer } from "../components/drawer";
+import { Drawer } from "vaul";
 import MonthPicker from '../components/MonthPicker';
 
 const Calendar = ({ specialDates }) => {
@@ -75,32 +77,24 @@ const Calendar = ({ specialDates }) => {
                 </div>
                 <div className="flex flex-wrap">
                     {Array.from({ length: totalCells }).map((_, i) => (
-                        <Dialog key={i}>
-                     
-                            <DialogTrigger 
-                                className={`border-gray-200 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])? 'bg-amber-50' : 'bg-white'} ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-amber-100' : ''}`}
+                        <Drawer.Root shouldScaleBackground>
+                        <Drawer.Trigger asChild>
+                        
+                            <div 
+                                className={`overflow-hidden border-gray-200 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])? 'bg-amber-50' : 'bg-white'} ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-cyan-100' : ''}`}
                             >
                                 {i >= firstDayOfMonth && (
                                     <>
-                                        <div className=" text-gray-400 text-xs mb-2 ">{dates[i - firstDayOfMonth].getDate()}</div>
-                                        <div className="text-xs text-gray-600 text-center  text-ellipsis overflow-hidden ">
+                                        <div className=" text-gray-400 text-xs mb-2">{dates[i - firstDayOfMonth].getDate()}</div>
+                                        <div className="text-xs text-gray-600 text-center text-ellipsis overflow-hidden">
                                             {getDescriptionForDate(dates[i - firstDayOfMonth])}
                                         </div>
-                                    <DialogContent onInteractOutside={(e) => {e.preventDefault();}} className="w-11/12">
-                                    <DialogHeader>
-                                        <DialogDescription className='text-xl text-center'>
-                                        {getDescriptionForDate(dates[i - firstDayOfMonth]) || (
-                                            <> 
-                                            <p className='text-4xl'>🤷</p>
-                                            <p>No activities</p>
-                                            </>)}
-                                        </DialogDescription>
-                                    </DialogHeader>
-                                </DialogContent>
+                                        <MyDrawer description={getDescriptionForDate(dates[i-firstDayOfMonth])} />
                                 </>
                                 )}
-                            </DialogTrigger>
-                        </Dialog>
+                            </div>
+                            </Drawer.Trigger>
+                            </Drawer.Root>
                     ))}
                 </div>
             </div>
