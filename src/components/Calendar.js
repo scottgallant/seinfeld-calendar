@@ -1,21 +1,4 @@
 import React, { useState } from 'react';
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-  } from "@/components/ui/dialog"
 import { MyDrawer } from "../components/drawer";
 import { Drawer } from "vaul";
 import MonthPicker from '../components/MonthPicker';
@@ -79,7 +62,6 @@ const Calendar = ({ specialDates }) => {
                     {Array.from({ length: totalCells }).map((_, i) => (
                         <Drawer.Root shouldScaleBackground key={i}>
                         <Drawer.Trigger asChild>
-                        
                             <div 
                                 className={`overflow-hidden border-gray-200 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth])? 'bg-amber-50' : 'bg-white'} ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth? 'bg-cyan-100' : ''}`}
                             >
