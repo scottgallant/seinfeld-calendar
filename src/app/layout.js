@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${GeistMono.className} `} >
-      <body>{children}</body>
+    <html lang="en" className={`${GeistMono.className} bg-black`} >
+      <body className='bg-black'>{children}</body>
       <SpeedInsights />
       <Analytics />
     </ html>

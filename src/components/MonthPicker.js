@@ -16,7 +16,7 @@ const MonthPicker = ({ selectedMonth, onMonthChange, monthNames, month }) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <h2 className="text-center text-xl my-10">{monthNames[month]} <ChevronDown className="inline" /></h2>
+        <h2 className="text-center text-xl my-10 text-white">{monthNames[month]} <ChevronDown className="inline" /></h2>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         {months.map(month => (

@@ -49,25 +49,28 @@ const Calendar = ({ specialDates }) => {
     <div className="lg:w-10/12 mx-auto bg-transparent">
       <MonthPicker selectedMonth={selectedMonth} onMonthChange={setSelectedMonth} monthNames={monthNames} month={month} />
 
-      <div className="mb-16 mx-4">
-        <div className="flex p-2 border-gray-200 border-b">
+      <div className="mb-10 md:mb-16 mx-4 text-white md:pt-4 md:px-6 md:pb-6 md:bg-gray-800 md:rounded-xl">
+        <div className="flex p-2">
           {daysOfWeek.map(day => (
             <div className="w-1/7 text-center text-xs py-1" key={day}>
               {day}
             </div>
           ))}
         </div>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap border-gray-800 border-t  md:border-black">
           {Array.from({ length: totalCells }).map((_, i) => (
             <Drawer.Root shouldScaleBackground key={i}>
               <Drawer.Trigger asChild>
                 <div
-                  className={`overflow-hidden border-gray-200 border-r border-b w-1/7 h-20 p-1 lg:p-2 ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth]) ? 'bg-amber-50' : 'bg-white'} ${i % 7 === 0 ? 'border-l' : ''} ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth ? 'bg-cyan-100' : ''}`}
+                  className={`overflow-hidden border-gray-800 border-r border-b w-1/7 h-20 p-1 lg:p-2 md:border-black
+                    ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth]) ? 'bg-amber-300 text-black' : 'bg-transparent'}
+                    ${i % 7 === 0 ? 'border-l' : ''}
+                    ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth ? 'ring-2 ring-cyan-600 ring-inset bg-gray-800' : ''}`}
                 >
                   {i >= firstDayOfMonth && (
                     <>
-                      <div className=" text-gray-400 text-xs mb-2">{dates[i - firstDayOfMonth].getDate()}</div>
-                      <div className="text-xs text-gray-600 text-center text-ellipsis overflow-hidden">
+                      <div className=" text-gray-500 text-xs mb-2">{dates[i - firstDayOfMonth].getDate()}</div>
+                      <div className="text-xs text-center text-ellipsis overflow-hidden">
                         {getDescriptionForDate(dates[i - firstDayOfMonth])}
                       </div>
                       <Drawer.Portal>
