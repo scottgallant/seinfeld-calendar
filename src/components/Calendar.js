@@ -65,7 +65,7 @@ const Calendar = ({ specialDates }) => {
                   className={`overflow-hidden border-gray-800 border-r border-b w-1/7 h-20 p-1 lg:p-2 md:border-black
                     ${i >= firstDayOfMonth && isSpecialDate(dates[i - firstDayOfMonth]) ? 'bg-amber-300 text-black' : 'bg-transparent'}
                     ${i % 7 === 0 ? 'border-l' : ''}
-                    ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth ? 'ring-2 ring-cyan-600 ring-inset bg-gray-800' : ''}`}
+                    ${i >= firstDayOfMonth && dates[i - firstDayOfMonth].getDate() === new Date().getDate() && selectedMonth === currentMonth ? 'ring-2 ring-cyan-600 ring-inset' : ''}`}
                 >
                   {i >= firstDayOfMonth && (
                     <>
