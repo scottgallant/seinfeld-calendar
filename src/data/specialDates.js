@@ -28,6 +28,7 @@ const specialDates = [
   { "date": "2024-02-04", "description": "Shoveling snow - 1 hour" },
   { "date": "2024-02-05", "description": "Shoveling snow - 2 hours" },
   { "date": "2024-02-09", "description": "Strength Training" },
+  { "date": "2024-02-12", "description": "Run 4.25K - Avg Pace: 7:20 min/KM, Avg HR: 152, Max HR: 167, Right knee pain (3/5)" },
 ];
 
 export default specialDates;
