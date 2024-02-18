@@ -31,6 +31,7 @@ const specialDates = [
   { "date": "2024-02-12", "description": "Run 4.25K - Avg Pace: 7:20 min/KM, 31 Mins, Avg HR: 152, Max HR: 167, Right knee pain (3/5). Knee remained sore the following day." },
   { "date": "2024-02-13", "description": "Strentgh Training" },
   { "date": "2024-02-17", "description": "Cross Country Ski - 8.4K (towed kids)" },
+  { "date": "2024-02-18", "description": "Cross Country Ski - 10.5K" },
 ];
 
 export default specialDates;
