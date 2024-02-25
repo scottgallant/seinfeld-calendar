@@ -35,6 +35,7 @@ const specialDates = [
   { "date": "2024-02-20", "description": "Strength Training" },
   { "date": "2024-02-21", "description": "Bike trainer 50mins - Avg HR: 122, Max HR: 146" },
   { "date": "2024-02-22", "description": "Snowboarding 3hrs" },
+  { "date": "2024-02-24", "description": "Bike trainer 1hr - Avg HR: 115, Max HR: 148" },
 ];
 
 export default specialDates;
