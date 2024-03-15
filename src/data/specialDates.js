@@ -38,8 +38,9 @@ const specialDates = [
   { "date": "2024-02-24", "description": "Bike trainer 1hr - Avg HR: 115, Max HR: 148" },
   { "date": "2024-02-28", "description": "Run 3K + Strength training - Avg pace 7:47 m/km, 22:48, Avg HR: 145, Max HR: 159" },
   { "date": "2024-03-09", "description": "Run 4K" },
-  { "date": "2024-03-11", "description": "Run 4K + walk 30min" },
+  { "date": "2024-03-11", "description": "Run 3K + walk 30min, some right knee pain that day" },
   { "date": "2024-03-12", "description": "Strength Training " },
+  { "date": "2024-03-15", "description": "Run 3K - Avg Pace: 9:00 min/KM, 28 Mins, Avg HR: 147, Max HR: 160, no knee pain" },
 ];
 
 export default specialDates;
