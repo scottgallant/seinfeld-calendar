@@ -45,6 +45,8 @@ const specialDates = [
   { "date": "2024-03-17", "description": "Strength Training" },
   { "date": "2024-03-18", "description": "Run 3.25K - slight pain and stiffness in right ankle for the last few days" },
   { "date": "2024-03-19", "description": "Strength Training" },
+  { "date": "2024-03-24", "description": "Stability exercises" },
+  { "date": "2024-03-25", "description": "Run 3.25K" },
 ];
 
 export default specialDates;
