@@ -6,7 +6,9 @@ import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   title: 'Seinfeld Calendar',
+  manifest: 'manifest.json',
   description: 'A daily habit tracker inspired by The Seinfeld Strategy',
+  favicon: '🗓️',
 }
 
 export default function RootLayout({ children }) {
