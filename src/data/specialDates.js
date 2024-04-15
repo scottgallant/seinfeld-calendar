@@ -47,12 +47,12 @@ const specialDates = [
   { "date": "2024-03-19", "description": "Strength Training" },
   { "date": "2024-03-24", "description": "Stability exercises" },
   { "date": "2024-03-25", "description": "Run 3.25K" },
-    { "date": "2024-03-28", "description": "Strength Training" },
+  { "date": "2024-03-28", "description": "Strength Training" },
   { "date": "2024-03-29", "description": "Run 4K" },
-    { "date": "2024-04-06", "description": "Run 3K - right knee pain (4/5) after 1.5K" },
-    { "date": "2024-04-09", "description": "Strength Training " },
-      { "date": "2024-04-12", "description": "Run 4K - 35 mins, no knee pain" },
-      { "date": "2024-04-13", "description": "Tabata 20 mins" }, 
+  { "date": "2024-04-06", "description": "Run 3K - right knee pain (4/5) after 1.5K" },
+  { "date": "2024-04-09", "description": "Strength Training " },
+  { "date": "2024-04-12", "description": "Run 4K - 35 mins, no knee pain" },
+  { "date": "2024-04-13", "description": "Tabata 20 mins" },
 ];
 
 
