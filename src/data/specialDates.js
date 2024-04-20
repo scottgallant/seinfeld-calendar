@@ -53,6 +53,8 @@ const specialDates = [
   { "date": "2024-04-09", "description": "Strength Training " },
   { "date": "2024-04-12", "description": "Run 4K - 35 mins, no knee pain" },
   { "date": "2024-04-13", "description": "Tabata 20 mins" },
+  { "date": "2024-04-17", "description": "Run 4K - no knee pain and very little ankle pain" },
+  { "date": "2024-04-19", "description": "Strength Training" },
 ];
 
 
