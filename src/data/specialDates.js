@@ -56,7 +56,7 @@ const specialDates = [
   { "date": "2024-04-17", "description": "Run 4K - no knee pain and very little ankle pain" },
   { "date": "2024-04-19", "description": "Strength Training" },
   { "date": "2024-04-22", "description": "Run 4K - sore ankle (outside and back) from walking in beach the day before" },
-  { "date": "2024-04-23", "description": "Strength Training " },
+  { "date": "2024-04-23", "description": "Strength Training - 🚨 right ankle became super sore all week, not just the inside ligament but moreso the back and outside too" },
 ];
 
 
