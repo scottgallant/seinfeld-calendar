@@ -58,6 +58,7 @@ const specialDates = [
   { "date": "2024-04-22", "description": "Run 4K - sore ankle (outside and back) from walking in beach the day before" },
   { "date": "2024-04-23", "description": "Strength Training - 🚨 right ankle became super sore all week, not just the inside ligament but moreso the back and outside too" },
   { "date": "2024-04-29", "description": "Tabata 20 mins" },
+  { "date": "2024-04-30", "description": "Run 3K - (1K with minimal shoes), 26:01 mins, pace 6:53/Km, avg HR 154, max HR 172, " },
 ];
 
 
