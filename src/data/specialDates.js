@@ -60,7 +60,7 @@ const specialDates = [
   { "date": "2024-04-29", "description": "Tabata 20 mins" },
   { "date": "2024-04-30", "description": "Run 3K - (1K with minimal shoes), 26:01 mins, pace 6:53/Km, avg HR 154, max HR 172, " },
   { "date": "2024-05-01", "description": "Strength Training" },
-  { "date": "2024-05-01", "description": "Run 4K - (1.5K with minimal shoes), 29:02 mins, pace 7:23/km, avg HR 151, max HR 169, no knee/ankle pain" },
+  { "date": "2024-05-02", "description": "Run 4K - (1.5K with minimal shoes), 29:02 mins, pace 7:23/km, avg HR 151, max HR 169, no knee/ankle pain" },
 ];
 
 
