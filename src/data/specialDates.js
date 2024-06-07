@@ -75,6 +75,8 @@ const specialDates = [
   { "date": "2024-05-30", "description": "Strength Training" },
   { "date": "2024-05-31", "description": "Run 4.15K - (2K with xeros), 31:40 min, pace 7:37/km, avg HR 152, max HR 166, slight right ankle pain 2/5" },
   { "date": "2024-06-03", "description": "Hike 6K, 2hrs, 33lbs of weight" },
+    { "date": "2024-06-06", "description": "Strength Training" },
+      { "date": "2024-06-07", "description": "Run 4K" },
 ];
 
 
