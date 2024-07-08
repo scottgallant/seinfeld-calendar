@@ -167,6 +167,21 @@ const specialDates = [
   { date: "2024-06-22", description: "Hike - Cape Chignecto" },
   { date: "2024-06-23", description: "Hike - Cape Chignecto" },
   { date: "2024-06-25", description: "Strength Training" },
+  {
+    date: "2024-07-03",
+    description:
+      "Tabata - 20 mins. Pushups, Dips, Side V sits, dead bug alternating arms/legs",
+  },
+  {
+    date: "2024-07-07",
+    description:
+      "Strength Training - Dumbell shoulder press, Single leg squat, calf raises, seated rotator cuff dumbell",
+  },
+  {
+    date: "2024-07-08",
+    description:
+      "Run - 16 mins, walk/run 1 min intervarl, 2km (left knee pain 2/10. Ankle pain 0). Tabata 15 mins - Pushups (6/interval), Crunches, one-arm tricep pushups",
+  },
 ];
 
 export default specialDates;
