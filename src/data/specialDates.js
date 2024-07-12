@@ -185,11 +185,12 @@ const specialDates = [
   {
     date: "2024-07-10",
     description:
-      "Run + Strength Training - Run: 18 mins, walk/run 1 min intervarl, 2.4km (left knee pain 2/10. Ankle pain 1/10)",
+      "Run + Strength Training - Run: 18 mins, walk/run 1 min intervarl, 2.4km (left knee pain 2/10. Ankle pain 1/10). Strength Training: Seated dumbell shoulder press, weigthed Lunges (right leg only), single leg deadlift (right leg only), seated rotator cuff curl",
   },
   {
     date: "2024-07-11",
-    description: "Strength Training",
+    description:
+      "Strength Training - Flatbench Dumbell press, Bent over barbell row, Shoulder Pullover on bench, Seated Calf Raises, face pulls",
   },
 ];
 
