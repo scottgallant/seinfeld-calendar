@@ -180,7 +180,16 @@ const specialDates = [
   {
     date: "2024-07-08",
     description:
-      "Run - 16 mins, walk/run 1 min intervarl, 2km (left knee pain 2/10. Ankle pain 0). Tabata 15 mins - Pushups (6/interval), Crunches, one-arm tricep pushups",
+      "Run + Tabata - Run: 16 mins, walk/run 1 min intervarl, 2km (left knee pain 2/10. Ankle pain 0). Taba:ta: 15 mins - Pushups (6/interval), Crunches, one-arm tricep pushups",
+  },
+  {
+    date: "2024-07-10",
+    description:
+      "Run + Strength Training - Run: 18 mins, walk/run 1 min intervarl, 2.4km (left knee pain 2/10. Ankle pain 1/10)",
+  },
+  {
+    date: "2024-07-11",
+    description: "Strength Training",
   },
 ];
 
